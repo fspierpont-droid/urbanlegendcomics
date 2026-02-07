@@ -6,8 +6,12 @@
   <meta name="theme-color" content="#07080b" />
 
   <title>Shop • Urban Legend Comics of Brandon</title>
-  <meta name="description" content="Featured keys, bundles & deals, and mystery boxes. Pay with Cash App or PayPal." />
+  <meta name="description" content="Featured books, collector bundles, and easy buying through PayPal or Cash App. Shipping available." />
   <meta name="robots" content="index,follow" />
+
+  <meta property="og:title" content="Shop • Urban Legend Comics of Brandon" />
+  <meta property="og:description" content="Featured books and bundles • Shipping + pickup • PayPal + Cash App" />
+  <meta property="og:type" content="website" />
 
   <link rel="stylesheet" href="./style.css" />
   <script defer src="./main.js"></script>
@@ -17,198 +21,340 @@
   <div class="texture" aria-hidden="true"></div>
 
   <div class="wrap">
-    <header class="topbar">
+    <!-- HEADER -->
+    <header class="topbar" aria-label="Top">
       <div class="brand">
-        <div class="mark"></div>
+        <a class="logoLink logoGlow" href="./index.html" aria-label="Urban Legend Comics home">
+          <img class="logo" src="./logo.png" alt="Urban Legend Comics of Brandon logo" />
+        </a>
+
         <div class="brandText">
           <div class="name">Urban Legend Comics of Brandon</div>
-          <div class="tag">Curated shop • Shipping + pickup</div>
+          <div class="tag">Shop • Featured books • Bundles • Shipping</div>
         </div>
       </div>
 
-      <nav class="actions">
-        <a class="btn" href="https://cash.app/$urbanlegendcomics" target="_blank">Cash App</a>
+      <nav class="actions" aria-label="Primary actions">
+        <a class="btn" href="https://www.instagram.com/urbanlegendcomicsofbrandon/" target="_blank" rel="noopener">Instagram</a>
         <a class="btn" href="tel:+18139431728">Call</a>
-        <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=1337+Oakfield+Dr+Brandon+FL+33511" target="_blank">Directions</a>
+        <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=1337+Oakfield+Dr+Brandon+FL+33511" target="_blank" rel="noopener">Directions</a>
       </nav>
     </header>
 
-    <nav class="siteNav">
+    <!-- NAV -->
+    <nav class="siteNav" aria-label="Site navigation">
       <a class="btn ghost" href="./index.html">Home</a>
       <a class="btn ghost" href="./shop.html">Shop</a>
       <a class="btn ghost" href="./spotlight.html">Spotlight</a>
       <a class="btn ghost" href="./sell.html">Sell a Collection</a>
     </nav>
 
-    <section class="hero">
+    <!-- HERO -->
+    <section class="hero" aria-label="Shop intro">
       <div class="heroCard">
         <div class="heroInner">
           <div class="kicker">
-            <span class="pill"><span class="dot"></span> Curated listings</span>
-            <span class="pill">Shipping + pickup</span>
+            <span class="pill"><span class="dot" aria-hidden="true"></span> Featured + bundles</span>
+            <span class="pill">Shipping available</span>
+            <span class="pill">PayPal + Cash App</span>
           </div>
 
-          <h1>Featured keys & bundles.<br/>No clutter. No gimmicks.</h1>
+          <h1>Shop the good stuff.<br/>Fast, simple, collector-safe.</h1>
 
           <p class="sub">
-            This page is intentionally curated. For daily updates, check Instagram — and if you’re hunting something specific,
-            drop a want list request below.
+            This isn’t a cart site. It’s a clean list of featured books and deals.
+            If you want something, you contact the shop — quick confirmation, then pay.
           </p>
 
-          <div class="heroMeta">
+          <div class="heroMeta" aria-label="Quick facts">
+            <div class="chip"><span>Phone</span> <a class="link" href="tel:+18139431728">(813) 943-1728</a></div>
             <div class="chip"><span>Cash App</span> $urbanlegendcomics</div>
-            <div class="chip"><span>Ship Tiers</span> $6 / $9 / $15</div>
-            <div class="chip"><span>Need help?</span> <a class="link" href="tel:+18139431728">Call the shop</a></div>
+            <div class="chip"><span>Best path</span> Call or DM with the Ref code</div>
           </div>
 
-          <div class="sectionNav">
-            <a class="btn primary" href="#featured">Featured Keys</a>
-            <a class="btn ghost" href="#bundles">Bundles & Deals</a>
-            <a class="btn ghost" href="#mystery">Mystery Boxes</a>
-            <a class="btn ghost" href="#wantlist">Want List</a>
+          <div class="sectionNav" aria-label="Jump links">
+            <a class="btn primary" href="#featured">Featured</a>
+            <a class="btn" href="#bundles">Bundles & Deals</a>
+            <a class="btn ghost" href="#buy">How to Buy</a>
           </div>
         </div>
-        <div class="divider"></div>
+        <div class="divider" aria-hidden="true"></div>
       </div>
     </section>
 
-    <section id="howtobuy" class="card">
+    <!-- FEATURED -->
+    <section id="featured" class="card" aria-label="Featured books" style="margin-top:14px">
       <div class="cardHeader">
-        <h2>How to Buy</h2>
-        <div class="hint">Simple + collector-safe</div>
+        <h2>Featured Books</h2>
+        <div class="hint">Examples • Update anytime</div>
       </div>
-      <div class="cardBody">
-        <ul class="list">
-          <li class="row">
-            <div class="ico">✅</div>
-            <div>
-              <strong>Step 1</strong>
-              <div class="val">Pick an item and note the <strong>Ref code</strong>.</div>
-            </div>
-          </li>
-          <li class="row">
-            <div class="ico">💸</div>
-            <div>
-              <strong>Step 2</strong>
-              <div class="val">Pay via Cash App or request a PayPal invoice by phone.</div>
-            </div>
-          </li>
-          <li class="row">
-            <div class="ico">📦</div>
-            <div>
-              <strong>Shipping</strong>
-              <div class="val">$6 (1–3 books) • $9 (4–10) • $15 (bundles)</div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
 
-    <section id="featured" class="card" style="margin-top:14px">
-      <div class="cardHeader">
-        <h2>Featured Keys</h2>
-        <div class="hint">Curated</div>
-      </div>
       <div class="cardBody">
-        <div class="products">
-          <article class="product">
+        <p class="sub">
+          These are example listings for now. Replace titles/prices anytime.
+          Each item has a Ref code — use it when you call or message.
+        </p>
+
+        <div class="products" aria-label="Featured items">
+          <article class="product" aria-label="Featured item">
             <div class="pTop">
               <div>
                 <div class="pTitle">Key Issue (Example)</div>
-                <div class="pMeta">High-grade copy<br/>Ref: UL-KEY-001</div>
+                <div class="pMeta">Clean copy • Photos on request<br/>Ref: UL-FEAT-001</div>
               </div>
-              <div class="badge">Key</div>
+              <div class="badge">Asking</div>
             </div>
             <div class="priceRow">
               <div>
-                <div class="price">$350</div>
-                <div class="smallNote">Ship: $9</div>
+                <div class="price">$450</div>
+                <div class="smallNote">Asking price • Shipping available</div>
               </div>
+              <a class="btn small ghost" href="#buy">Buy</a>
             </div>
             <div class="pActions">
-              <a class="btn primary" href="https://cash.app/$urbanlegendcomics" target="_blank">Cash App</a>
-              <a class="btn" href="tel:+18139431728">PayPal Invoice</a>
+              <a class="btn primary" href="tel:+18139431728">Call to Buy</a>
+              <a class="btn" href="https://www.instagram.com/urbanlegendcomicsofbrandon/" target="_blank" rel="noopener">DM for Pics</a>
+            </div>
+          </article>
+
+          <article class="product" aria-label="Featured item">
+            <div class="pTop">
+              <div>
+                <div class="pTitle">High-Grade Back Issue (Example)</div>
+                <div class="pMeta">Nice eye appeal • Quick ship<br/>Ref: UL-FEAT-002</div>
+              </div>
+              <div class="badge">Asking</div>
+            </div>
+            <div class="priceRow">
+              <div>
+                <div class="price">$120</div>
+                <div class="smallNote">Asking price • Pickup available</div>
+              </div>
+              <a class="btn small ghost" href="#buy">Buy</a>
+            </div>
+            <div class="pActions">
+              <a class="btn primary" href="tel:+18139431728">Call to Buy</a>
+              <a class="btn" href="https://www.instagram.com/urbanlegendcomicsofbrandon/" target="_blank" rel="noopener">DM for Pics</a>
+            </div>
+          </article>
+
+          <article class="product" aria-label="Featured item">
+            <div class="pTop">
+              <div>
+                <div class="pTitle">Collector Book (Example)</div>
+                <div class="pMeta">Notes by request • Ref code required<br/>Ref: UL-FEAT-003</div>
+              </div>
+              <div class="badge">Asking</div>
+            </div>
+            <div class="priceRow">
+              <div>
+                <div class="price">$950</div>
+                <div class="smallNote">Asking price • Insured shipping recommended</div>
+              </div>
+              <a class="btn small ghost" href="./spotlight.html">Spotlight</a>
+            </div>
+            <div class="pActions">
+              <a class="btn primary" href="./spotlight.html">See Spotlight</a>
+              <a class="btn" href="tel:+18139431728">Call the Shop</a>
+            </div>
+          </article>
+
+          <article class="product" aria-label="Featured item">
+            <div class="pTop">
+              <div>
+                <div class="pTitle">Reader Lot (Example)</div>
+                <div class="pMeta">Great starter bundle • Limited<br/>Ref: UL-FEAT-004</div>
+              </div>
+              <div class="badge">Deal</div>
+            </div>
+            <div class="priceRow">
+              <div>
+                <div class="price">$40</div>
+                <div class="smallNote">Bundle price • Ships easy</div>
+              </div>
+              <a class="btn small ghost" href="#bundles">More</a>
+            </div>
+            <div class="pActions">
+              <a class="btn primary" href="tel:+18139431728">Call to Claim</a>
+              <a class="btn" href="#buy">How to Buy</a>
             </div>
           </article>
         </div>
       </div>
     </section>
-
-    <section id="bundles" class="card" style="margin-top:14px">
+    <!-- BUNDLES -->
+    <section id="bundles" class="card" aria-label="Bundles and deals" style="margin-top:14px">
       <div class="cardHeader">
         <h2>Bundles & Deals</h2>
-        <div class="hint">Moves inventory</div>
+        <div class="hint">Good books that move</div>
       </div>
+
       <div class="cardBody">
-        <div class="products">
-          <article class="product">
+        <p class="sub">
+          Bundles are perfect for shipping and for clearing runs that deserve a new home.
+          These are examples — swap them anytime.
+        </p>
+
+        <div class="products" aria-label="Bundle items">
+          <article class="product" aria-label="Bundle item">
             <div class="pTop">
               <div>
-                <div class="pTitle">Spider-Man Reader Bundle</div>
-                <div class="pMeta">10 books • Ref: UL-BND-010</div>
+                <div class="pTitle">Series Run Bundle (Example)</div>
+                <div class="pMeta">Run/mini/arc • Bagged & boarded where applicable<br/>Ref: UL-BNDL-001</div>
+              </div>
+              <div class="badge">Bundle</div>
+            </div>
+            <div class="priceRow">
+              <div>
+                <div class="price">$85</div>
+                <div class="smallNote">Ships well • Great value</div>
+              </div>
+              <a class="btn small ghost" href="#buy">Buy</a>
+            </div>
+            <div class="pActions">
+              <a class="btn primary" href="tel:+18139431728">Call to Buy</a>
+              <a class="btn" href="https://www.instagram.com/urbanlegendcomicsofbrandon/" target="_blank" rel="noopener">DM Ref Code</a>
+            </div>
+          </article>
+
+          <article class="product" aria-label="Bundle item">
+            <div class="pTop">
+              <div>
+                <div class="pTitle">Themed Reader Pack (Example)</div>
+                <div class="pMeta">Character/team theme • Great for gifts<br/>Ref: UL-BNDL-002</div>
+              </div>
+              <div class="badge">Deal</div>
+            </div>
+            <div class="priceRow">
+              <div>
+                <div class="price">$30</div>
+                <div class="smallNote">Simple, fast shipping</div>
+              </div>
+              <a class="btn small ghost" href="#buy">Buy</a>
+            </div>
+            <div class="pActions">
+              <a class="btn primary" href="tel:+18139431728">Call to Claim</a>
+              <a class="btn" href="#buy">How to Buy</a>
+            </div>
+          </article>
+
+          <article class="product" aria-label="Bundle item">
+            <div class="pTop">
+              <div>
+                <div class="pTitle">Mystery Key Pack (Example)</div>
+                <div class="pMeta">Good stuff only • No junk lots<br/>Ref: UL-BNDL-003</div>
               </div>
               <div class="badge">Bundle</div>
             </div>
             <div class="priceRow">
               <div>
                 <div class="price">$60</div>
-                <div class="smallNote">Ship: $9</div>
+                <div class="smallNote">Collector-friendly • Ask for a theme</div>
               </div>
+              <a class="btn small ghost" href="#buy">Buy</a>
             </div>
             <div class="pActions">
-              <a class="btn primary" href="https://cash.app/$urbanlegendcomics" target="_blank">Cash App</a>
+              <a class="btn primary" href="tel:+18139431728">Call to Buy</a>
+              <a class="btn" href="https://www.instagram.com/urbanlegendcomicsofbrandon/" target="_blank" rel="noopener">DM for Options</a>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
 
-    <section id="mystery" class="card" style="margin-top:14px">
-      <div class="cardHeader">
-        <h2>Mystery Boxes</h2>
-        <div class="hint">Dealer picks</div>
-      </div>
-      <div class="cardBody">
-        <div class="products">
-          <article class="product">
+          <article class="product" aria-label="Bundle item">
             <div class="pTop">
               <div>
-                <div class="pTitle">Mystery Box • $50</div>
-                <div class="pMeta">Superhero / Horror / Mixed</div>
+                <div class="pTitle">Box Deal (Example)</div>
+                <div class="pMeta">Big bundle • Pickup recommended<br/>Ref: UL-BNDL-004</div>
               </div>
-              <div class="badge">Mystery</div>
+              <div class="badge">Pickup</div>
             </div>
             <div class="priceRow">
               <div>
-                <div class="price">$50</div>
-                <div class="smallNote">Ship: $15</div>
+                <div class="price">$250</div>
+                <div class="smallNote">Best as pickup • Shipping possible by quote</div>
               </div>
+              <a class="btn small ghost" href="#buy">Buy</a>
             </div>
             <div class="pActions">
-              <a class="btn primary" href="https://cash.app/$urbanlegendcomics" target="_blank">Cash App</a>
+              <a class="btn primary" href="tel:+18139431728">Call the Shop</a>
+              <a class="btn" href="#buy">How it Works</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="wantlist" class="card" style="margin-top:14px">
+    <!-- HOW TO BUY -->
+    <section id="buy" class="card" aria-label="How to buy" style="margin-top:14px">
       <div class="cardHeader">
-        <h2>Want List</h2>
-        <div class="hint">Tell us what you need</div>
+        <h2>How to Buy</h2>
+        <div class="hint">Simple process</div>
       </div>
+
       <div class="cardBody">
-        <form class="form">
-          <input class="input" placeholder="Your name" />
-          <input class="input" placeholder="Phone or email" />
-          <textarea class="textarea" placeholder="What are you looking for?"></textarea>
-          <button class="btn primary">Send Request</button>
-        </form>
+        <ul class="list">
+          <li class="row">
+            <div class="ico" aria-hidden="true">📞</div>
+            <div>
+              <strong>Step 1: Contact the shop</strong>
+              <div class="val">Call or DM with the Ref code (example: UL-FEAT-002).</div>
+              <div class="muted">We confirm condition, photos, and shipping/pickup.</div>
+            </div>
+          </li>
+
+          <li class="row">
+            <div class="ico" aria-hidden="true">✅</div>
+            <div>
+              <strong>Step 2: Confirm the total</strong>
+              <div class="val">Price + shipping/insurance (if needed).</div>
+              <div class="muted">High-end books may require insured shipping + signature.</div>
+            </div>
+          </li>
+
+          <li class="row">
+            <div class="ico" aria-hidden="true">💳</div>
+            <div>
+              <strong>Step 3: Pay</strong>
+              <div class="val">
+                Cash App: <strong>$urbanlegendcomics</strong><br/>
+                PayPal available (ask when you call/DM)
+              </div>
+              <div class="muted">If you want a PayPal invoice, say so up front.</div>
+            </div>
+          </li>
+
+          <li class="row">
+            <div class="ico" aria-hidden="true">📦</div>
+            <div>
+              <strong>Step 4: Ship or pickup</strong>
+              <div class="val">Shipping available. Pickup during store hours.</div>
+              <div class="muted">We’ll confirm tracking once it’s out.</div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="sectionNav" style="margin-top:12px" aria-label="Buy actions">
+          <a class="btn primary" href="tel:+18139431728">Call Now</a>
+          <a class="btn" href="https://www.instagram.com/urbanlegendcomicsofbrandon/" target="_blank" rel="noopener">DM on Instagram</a>
+          <a class="btn ghost" href="./spotlight.html">High-End Spotlight</a>
+        </div>
+
+        <hr class="sep" />
+
+        <p class="sub">
+          Want something specific? Call with a want list — the inventory is deep and moves fast.
+        </p>
       </div>
     </section>
 
-    <footer class="footer">
+    <!-- FOOTER -->
+    <footer class="footer" aria-label="Footer">
       <div>© <span id="year"></span> Urban Legend Comics of Brandon</div>
+      <div class="footerLinks">
+        <a class="btn ghost" href="./index.html">Home</a>
+        <a class="btn ghost" href="./shop.html">Shop</a>
+        <a class="btn ghost" href="./spotlight.html">Spotlight</a>
+        <a class="btn ghost" href="./sell.html">Sell</a>
+      </div>
     </footer>
   </div>
 </body>
