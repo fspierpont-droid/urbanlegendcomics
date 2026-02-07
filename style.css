@@ -1,486 +1,308 @@
-/* ===============================
-   Urban Legend Comics – Core Styles
-      Mobile-first • Static • No fluff
-         =============================== */
-
-         :root{
-           --bg:#07080b;
-             --panel:#0f1118;
-               --panel2:#121524;
-                 --text:#f4f5f8;
-                   --muted:#b7bdc9;
-                     --line:rgba(255,255,255,.08);
-                       --shadow: 0 16px 40px rgba(0,0,0,.45);
-                         --accent:#f7b500;
-                           --accent2:#00d4ff;
-                             --radius:20px;
-                               --radius2:28px;
-                                 --max:1080px;
-                                 }
-
-                                 *,
-                                 *::before,
-                                 *::after{
-                                   box-sizing:border-box;
-                                   }
-
-                                   html,body{
-                                     margin:0;
-                                       padding:0;
-                                       }
-
-                                       body{
-                                         min-height:100%;
-                                           font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-                                             background:
-                                                 radial-gradient(1200px 600px at 15% 0%, rgba(247,181,0,.18), transparent 55%),
-                                                     radial-gradient(900px 500px at 85% 10%, rgba(0,212,255,.12), transparent 55%),
-                                                         linear-gradient(180deg, #07080b 0%, #05060a 100%);
-                                                           color:var(--text);
-                                                             overflow-x:hidden;
-                                                             }
-
-                                                             /* Comic-style halftone texture */
-                                                             .texture{
-                                                               pointer-events:none;
-                                                                 position:fixed;
-                                                                   inset:-200px;
-                                                                     background-image:
-                                                                         radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
-                                                                           background-size:10px 10px;
-                                                                             opacity:.25;
-                                                                               filter:blur(.2px);
-                                                                                 transform:rotate(-7deg);
-                                                                                   z-index:0;
-                                                                                   }
-
-                                                                                   /* Links */
-                                                                                   a{
-                                                                                     color:inherit;
-                                                                                       text-decoration:none;
-                                                                                       }
-                                                                                       a.link{
-                                                                                         text-decoration:underline;
-                                                                                           text-underline-offset:3px;
-                                                                                           }
-
-                                                                                           /* Layout wrapper */
-                                                                                           .wrap{
-                                                                                             position:relative;
-                                                                                               z-index:1;
-                                                                                                 max-width:var(--max);
-                                                                                                   margin:0 auto;
-                                                                                                     padding:20px 16px 56px;
-                                                                                                     }
-
-                                                                                                     /* ===============================
-                                                                                                        Top Bar
-                                                                                                           =============================== */
-
-                                                                                                           .topbar{
-                                                                                                             display:flex;
-                                                                                                               align-items:center;
-                                                                                                                 justify-content:space-between;
-                                                                                                                   gap:12px;
-                                                                                                                     padding:10px 0 18px;
-                                                                                                                     }
-
-                                                                                                                     .brand{
-                                                                                                                       display:flex;
-                                                                                                                         align-items:center;
-                                                                                                                           gap:12px;
-                                                                                                                             min-width:0;
-                                                                                                                             }
-
-                                                                                                                             .mark{
-                                                                                                                               width:40px;
-                                                                                                                                 height:40px;
-                                                                                                                                   border-radius:14px;
-                                                                                                                                     background:
-                                                                                                                                         radial-gradient(16px 16px at 30% 25%, rgba(255,255,255,.25), transparent 60%),
-                                                                                                                                             linear-gradient(135deg, rgba(247,181,0,.95), rgba(0,212,255,.75));
-                                                                                                                                               box-shadow:0 10px 30px rgba(0,0,0,.35);
-                                                                                                                                                 border:1px solid rgba(255,255,255,.16);
-                                                                                                                                                   flex:0 0 auto;
-                                                                                                                                                   }
-
-                                                                                                                                                   .brandText{
-                                                                                                                                                     min-width:0;
-                                                                                                                                                     }
-
-                                                                                                                                                     .brandText .name{
-                                                                                                                                                       font-weight:900;
-                                                                                                                                                         letter-spacing:.8px;
-                                                                                                                                                           font-size:14px;
-                                                                                                                                                             text-transform:uppercase;
-                                                                                                                                                               white-space:nowrap;
-                                                                                                                                                                 overflow:hidden;
-                                                                                                                                                                   text-overflow:ellipsis;
-                                                                                                                                                                   }
-
-                                                                                                                                                                   .brandText .tag{
-                                                                                                                                                                     color:var(--muted);
-                                                                                                                                                                       font-size:12px;
-                                                                                                                                                                         margin-top:2px;
-                                                                                                                                                                           white-space:nowrap;
-                                                                                                                                                                             overflow:hidden;
-                                                                                                                                                                               text-overflow:ellipsis;
-                                                                                                                                                                               }
-
-                                                                                                                                                                               /* ===============================
-                                                                                                                                                                                  Buttons
-                                                                                                                                                                                     =============================== */
-
-                                                                                                                                                                                     .actions{
-                                                                                                                                                                                       display:flex;
-                                                                                                                                                                                         gap:10px;
-                                                                                                                                                                                           flex-wrap:wrap;
-                                                                                                                                                                                             justify-content:flex-end;
-                                                                                                                                                                                             }
-
-                                                                                                                                                                                             .btn{
-                                                                                                                                                                                               display:inline-flex;
-                                                                                                                                                                                                 align-items:center;
-                                                                                                                                                                                                   justify-content:center;
-                                                                                                                                                                                                     gap:10px;
-                                                                                                                                                                                                       padding:10px 14px;
-                                                                                                                                                                                                         border-radius:14px;
-                                                                                                                                                                                                           background:rgba(255,255,255,.04);
-                                                                                                                                                                                                             border:1px solid var(--line);
-                                                                                                                                                                                                               color:var(--text);
-                                                                                                                                                                                                                 font-weight:750;
-                                                                                                                                                                                                                   font-size:13px;
-                                                                                                                                                                                                                     letter-spacing:.2px;
-                                                                                                                                                                                                                       box-shadow:0 8px 22px rgba(0,0,0,.25);
-                                                                                                                                                                                                                         transition:transform .12s ease, background .12s ease, border-color .12s ease;
-                                                                                                                                                                                                                           user-select:none;
-                                                                                                                                                                                                                             -webkit-tap-highlight-color:transparent;
-                                                                                                                                                                                                                             }
-
-                                                                                                                                                                                                                             .btn:hover{
-                                                                                                                                                                                                                               transform:translateY(-1px);
-                                                                                                                                                                                                                                 background:rgba(255,255,255,.06);
-                                                                                                                                                                                                                                   border-color:rgba(255,255,255,.16);
-                                                                                                                                                                                                                                   }
-
-                                                                                                                                                                                                                                   .btn:active{
-                                                                                                                                                                                                                                     transform:scale(.99);
-                                                                                                                                                                                                                                     }
-
-                                                                                                                                                                                                                                     .btn.primary{
-                                                                                                                                                                                                                                       background:linear-gradient(135deg, rgba(247,181,0,1), rgba(247,181,0,.85));
-                                                                                                                                                                                                                                         color:#141414;
-                                                                                                                                                                                                                                           border-color:transparent;
-                                                                                                                                                                                                                                             box-shadow:0 14px 34px rgba(247,181,0,.18);
-                                                                                                                                                                                                                                             }
-
-                                                                                                                                                                                                                                             .btn.ghost{
-                                                                                                                                                                                                                                               background:transparent;
-                                                                                                                                                                                                                                                 border-color:rgba(255,255,255,.10);
-                                                                                                                                                                                                                                                 }
-
-                                                                                                                                                                                                                                                 /* ===============================
-                                                                                                                                                                                                                                                    Hero
-                                                                                                                                                                                                                                                       =============================== */
-
-                                                                                                                                                                                                                                                       .hero{
-                                                                                                                                                                                                                                                         display:grid;
-                                                                                                                                                                                                                                                           gap:14px;
-                                                                                                                                                                                                                                                             padding:14px 0 8px;
-                                                                                                                                                                                                                                                             }
-
-                                                                                                                                                                                                                                                             .heroCard{
-                                                                                                                                                                                                                                                               position:relative;
-                                                                                                                                                                                                                                                                 border-radius:var(--radius2);
-                                                                                                                                                                                                                                                                   background:
-                                                                                                                                                                                                                                                                       radial-gradient(700px 280px at 12% 20%, rgba(247,181,0,.18), transparent 60%),
-                                                                                                                                                                                                                                                                           radial-gradient(680px 300px at 90% 15%, rgba(0,212,255,.10), transparent 60%),
-                                                                                                                                                                                                                                                                               linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-                                                                                                                                                                                                                                                                                 border:1px solid rgba(255,255,255,.10);
-                                                                                                                                                                                                                                                                                   box-shadow:var(--shadow);
-                                                                                                                                                                                                                                                                                     overflow:hidden;
-                                                                                                                                                                                                                                                                                     }
-
-                                                                                                                                                                                                                                                                                     .heroInner{
-                                                                                                                                                                                                                                                                                       padding:22px 18px 18px;
-                                                                                                                                                                                                                                                                                         display:grid;
-                                                                                                                                                                                                                                                                                           gap:10px;
-                                                                                                                                                                                                                                                                                           }
-
-                                                                                                                                                                                                                                                                                           .kicker{
-                                                                                                                                                                                                                                                                                             display:flex;
-                                                                                                                                                                                                                                                                                               gap:10px;
-                                                                                                                                                                                                                                                                                                 flex-wrap:wrap;
-                                                                                                                                                                                                                                                                                                   font-weight:800;
-                                                                                                                                                                                                                                                                                                     font-size:12px;
-                                                                                                                                                                                                                                                                                                       text-transform:uppercase;
-                                                                                                                                                                                                                                                                                                       }
-
-                                                                                                                                                                                                                                                                                                       .kicker .pill{
-                                                                                                                                                                                                                                                                                                         display:inline-flex;
-                                                                                                                                                                                                                                                                                                           align-items:center;
-                                                                                                                                                                                                                                                                                                             gap:8px;
-                                                                                                                                                                                                                                                                                                               padding:6px 10px;
-                                                                                                                                                                                                                                                                                                                 border-radius:999px;
-                                                                                                                                                                                                                                                                                                                   background:rgba(0,0,0,.28);
-                                                                                                                                                                                                                                                                                                                     border:1px solid rgba(255,255,255,.10);
-                                                                                                                                                                                                                                                                                                                     }
-
-                                                                                                                                                                                                                                                                                                                     .dot{
-                                                                                                                                                                                                                                                                                                                       width:9px;
-                                                                                                                                                                                                                                                                                                                         height:9px;
-                                                                                                                                                                                                                                                                                                                           border-radius:50%;
-                                                                                                                                                                                                                                                                                                                             background:var(--accent);
-                                                                                                                                                                                                                                                                                                                               box-shadow:0 0 0 4px rgba(247,181,0,.12);
-                                                                                                                                                                                                                                                                                                                               }
-
-                                                                                                                                                                                                                                                                                                                               h1{
-                                                                                                                                                                                                                                                                                                                                 margin:0;
-                                                                                                                                                                                                                                                                                                                                   font-size:34px;
-                                                                                                                                                                                                                                                                                                                                     line-height:1.05;
-                                                                                                                                                                                                                                                                                                                                       font-weight:950;
-                                                                                                                                                                                                                                                                                                                                       }
-
-                                                                                                                                                                                                                                                                                                                                       .sub{
-                                                                                                                                                                                                                                                                                                                                         margin:0;
-                                                                                                                                                                                                                                                                                                                                           color:var(--muted);
-                                                                                                                                                                                                                                                                                                                                             font-size:15px;
-                                                                                                                                                                                                                                                                                                                                               line-height:1.5;
-                                                                                                                                                                                                                                                                                                                                               }
-
-                                                                                                                                                                                                                                                                                                                                               .subTight{
-                                                                                                                                                                                                                                                                                                                                                 margin-bottom:12px;
-                                                                                                                                                                                                                                                                                                                                                 }
-
-                                                                                                                                                                                                                                                                                                                                                 .heroMeta{
-                                                                                                                                                                                                                                                                                                                                                   display:flex;
-                                                                                                                                                                                                                                                                                                                                                     gap:10px;
-                                                                                                                                                                                                                                                                                                                                                       flex-wrap:wrap;
-                                                                                                                                                                                                                                                                                                                                                       }
-
-                                                                                                                                                                                                                                                                                                                                                       .chip{
-                                                                                                                                                                                                                                                                                                                                                         padding:10px 12px;
-                                                                                                                                                                                                                                                                                                                                                           border-radius:16px;
-                                                                                                                                                                                                                                                                                                                                                             background:rgba(0,0,0,.22);
-                                                                                                                                                                                                                                                                                                                                                               border:1px solid rgba(255,255,255,.10);
-                                                                                                                                                                                                                                                                                                                                                                 font-weight:750;
-                                                                                                                                                                                                                                                                                                                                                                   font-size:13px;
-                                                                                                                                                                                                                                                                                                                                                                   }
-
-                                                                                                                                                                                                                                                                                                                                                                   .chip span{
-                                                                                                                                                                                                                                                                                                                                                                     color:var(--muted);
-                                                                                                                                                                                                                                                                                                                                                                       font-weight:700;
-                                                                                                                                                                                                                                                                                                                                                                         margin-right:6px;
-                                                                                                                                                                                                                                                                                                                                                                         }
-
-                                                                                                                                                                                                                                                                                                                                                                         .sectionNav{
-                                                                                                                                                                                                                                                                                                                                                                           display:flex;
-                                                                                                                                                                                                                                                                                                                                                                             gap:10px;
-                                                                                                                                                                                                                                                                                                                                                                               flex-wrap:wrap;
-                                                                                                                                                                                                                                                                                                                                                                               }
-
-                                                                                                                                                                                                                                                                                                                                                                               .divider{
-                                                                                                                                                                                                                                                                                                                                                                                 height:1px;
-                                                                                                                                                                                                                                                                                                                                                                                   background:rgba(255,255,255,.08);
-                                                                                                                                                                                                                                                                                                                                                                                   }
-
-                                                                                                                                                                                                                                                                                                                                                                                   /* ===============================
-                                                                                                                                                                                                                                                                                                                                                                                      Grid & Cards
-                                                                                                                                                                                                                                                                                                                                                                                         =============================== */
-
-                                                                                                                                                                                                                                                                                                                                                                                         .grid{
-                                                                                                                                                                                                                                                                                                                                                                                           display:grid;
-                                                                                                                                                                                                                                                                                                                                                                                             gap:14px;
-                                                                                                                                                                                                                                                                                                                                                                                               margin-top:14px;
-                                                                                                                                                                                                                                                                                                                                                                                               }
-
-                                                                                                                                                                                                                                                                                                                                                                                               @media (min-width:900px){
-                                                                                                                                                                                                                                                                                                                                                                                                 .grid{
-                                                                                                                                                                                                                                                                                                                                                                                                     grid-template-columns:1.05fr .95fr;
-                                                                                                                                                                                                                                                                                                                                                                                                       }
-                                                                                                                                                                                                                                                                                                                                                                                                         h1{
-                                                                                                                                                                                                                                                                                                                                                                                                             font-size:46px;
-                                                                                                                                                                                                                                                                                                                                                                                                               }
-                                                                                                                                                                                                                                                                                                                                                                                                                 .heroInner{
-                                                                                                                                                                                                                                                                                                                                                                                                                     padding:26px 22px 20px;
-                                                                                                                                                                                                                                                                                                                                                                                                                       }
-                                                                                                                                                                                                                                                                                                                                                                                                                       }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                       .card{
-                                                                                                                                                                                                                                                                                                                                                                                                                         border-radius:var(--radius);
-                                                                                                                                                                                                                                                                                                                                                                                                                           background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-                                                                                                                                                                                                                                                                                                                                                                                                                             border:1px solid rgba(255,255,255,.10);
-                                                                                                                                                                                                                                                                                                                                                                                                                               box-shadow:var(--shadow);
-                                                                                                                                                                                                                                                                                                                                                                                                                                 overflow:hidden;
-                                                                                                                                                                                                                                                                                                                                                                                                                                 }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                 .cardHeader{
-                                                                                                                                                                                                                                                                                                                                                                                                                                   padding:16px 16px 10px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                     display:flex;
-                                                                                                                                                                                                                                                                                                                                                                                                                                       justify-content:space-between;
-                                                                                                                                                                                                                                                                                                                                                                                                                                         align-items:flex-end;
-                                                                                                                                                                                                                                                                                                                                                                                                                                         }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                         .cardHeader h2{
-                                                                                                                                                                                                                                                                                                                                                                                                                                           margin:0;
-                                                                                                                                                                                                                                                                                                                                                                                                                                             font-size:16px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                               font-weight:900;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                 letter-spacing:.2px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                   text-transform:uppercase;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                   }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                   .cardHeader .hint{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                     font-size:12px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                       color:var(--muted);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                         font-weight:700;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                         }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                         .cardBody{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                           padding:0 16px 16px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                           }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                           /* ===============================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                              Lists / Rows
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                 =============================== */
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                 .list{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                   list-style:none;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                     padding:0;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                       margin:0;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                         display:grid;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                           gap:10px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                           }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                           .row{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                             display:flex;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                               gap:12px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 align-items:flex-start;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   padding:12px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     border-radius:16px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       background:rgba(0,0,0,.22);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         border:1px solid rgba(255,255,255,.08);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         .ico{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           width:36px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             height:36px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               border-radius:14px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 background:rgba(255,255,255,.06);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   border:1px solid rgba(255,255,255,.10);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     display:grid;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       place-items:center;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         flex:0 0 auto;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         .row strong{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           display:block;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             font-size:13px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               font-weight:900;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 text-transform:uppercase;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 .row .val{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   font-weight:750;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     font-size:14px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       line-height:1.35;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       .row .muted{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         color:var(--muted);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           font-size:12px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             margin-top:2px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             /* ===============================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Utility Layout
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   =============================== */
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   .twoCol{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     display:grid;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       gap:10px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       @media (min-width:600px){
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         .twoCol{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             grid-template-columns:1fr 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               .actionsBlock{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 margin-top:12px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 .spacer{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   height:12px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   .spacerSm{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     height:10px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     /* ===============================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Embeds
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           =============================== */
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           .embedBox{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             border-radius:18px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               overflow:hidden;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 border:1px solid rgba(255,255,255,.10);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   background:rgba(0,0,0,.22);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   .embedPad{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     padding:12px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     .embedTitle{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       font-weight:900;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         letter-spacing:.2px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           text-transform:uppercase;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             font-size:13px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             .igWrap{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               padding:0 12px 12px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               /* ===============================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Footer
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     =============================== */
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     .footer{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       margin-top:20px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         padding-top:18px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           border-top:1px solid rgba(255,255,255,.08);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             color:var(--muted);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               font-size:12px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 display:flex;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   justify-content:space-between;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     align-items:center;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       gap:10px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         flex-wrap:wrap;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         .footerLinks{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           display:flex;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             gap:10px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               flex-wrap:wrap;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               /* ===============================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Accessibility
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     =============================== */
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     .btn:focus-visible,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     a:focus-visible{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       outline:3px solid rgba(0,212,255,.45);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         outline-offset:2px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           border-radius:16px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           @media (prefers-reduced-motion: reduce){
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             *{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 scroll-behavior:auto !important;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     transition:none !important;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       }
+:root{
+  --bg:#06070a;
+  --panel:#0c0f14;
+  --panel2:#0a0c10;
+  --border:rgba(255,255,255,.08);
+  --border2:rgba(255,255,255,.12);
+  --text:rgba(255,255,255,.92);
+  --muted:rgba(255,255,255,.66);
+  --muted2:rgba(255,255,255,.52);
+  --accent:#ff1b2d;      /* Venom red */
+  --accent2:#ff3b4a;
+  --glow:rgba(255,27,45,.22);
+  --link:#e8e8e8;
+  --shadow:0 18px 60px rgba(0,0,0,.55);
+  --shadow2:0 10px 30px rgba(0,0,0,.45);
+  --r:18px;
+  --r2:14px;
+  --max:1080px;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+  --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--sans);
+  color:var(--text);
+  background:
+    radial-gradient(900px 520px at 8% -5%, rgba(255,27,45,.18), transparent 55%),
+    radial-gradient(700px 420px at 92% 0%, rgba(255,255,255,.06), transparent 60%),
+    radial-gradient(800px 520px at 50% 120%, rgba(255,27,45,.12), transparent 55%),
+    linear-gradient(180deg, #05060a 0%, #06070a 55%, #05060a 100%);
+  overflow-x:hidden;
+}
+
+a{color:var(--link); text-decoration:none}
+a:hover{text-decoration:underline}
+
+.texture{
+  position:fixed; inset:0;
+  pointer-events:none;
+  opacity:.25;
+  background:
+    radial-gradient(circle at 40% 20%, rgba(255,255,255,.06), transparent 35% .),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.20'/%3E%3C/svg%3E");
+  mix-blend-mode:overlay;
+}
+
+.wrap{max-width:var(--max); margin:0 auto; padding:18px 14px 40px}
+
+.topbar{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:14px;
+  padding:14px 14px;
+  background:linear-gradient(180deg, rgba(10,12,16,.86), rgba(10,12,16,.65));
+  border:1px solid var(--border);
+  border-radius:var(--r);
+  box-shadow:var(--shadow2);
+  position:sticky; top:10px; z-index:30;
+  backdrop-filter: blur(10px);
+}
+
+.brand{display:flex; align-items:center; gap:12px; min-width:0}
+.brand .mark{
+  width:44px; height:44px; border-radius:14px;
+  background:
+    radial-gradient(16px 16px at 30% 28%, rgba(255,255,255,.20), transparent 55%),
+    radial-gradient(18px 18px at 72% 30%, rgba(255,255,255,.18), transparent 58%),
+    radial-gradient(55px 55px at 50% 65%, rgba(255,27,45,.26), transparent 70%),
+    linear-gradient(180deg, #0a0c10, #06070a);
+  border:1px solid var(--border2);
+  box-shadow: 0 0 0 1px rgba(0,0,0,.55) inset, 0 10px 24px rgba(0,0,0,.45);
+  position:relative;
+}
+.brand .mark::after{
+  content:"";
+  position:absolute; inset:-2px;
+  border-radius:16px;
+  background: radial-gradient(60% 60% at 50% 50%, var(--glow), transparent 70%);
+  filter: blur(10px);
+  z-index:-1;
+}
+
+.brandText{min-width:0}
+.brandText .name{
+  font-weight:800; letter-spacing:.2px;
+  font-size:14px; line-height:1.05;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.brandText .tag{
+  font-size:12px; color:var(--muted2);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  margin-top:4px;
+}
+
+.actions{display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+
+.siteNav{
+  margin-top:12px;
+  display:flex; gap:10px; flex-wrap:wrap;
+  padding:12px 12px;
+  border:1px solid var(--border);
+  border-radius:var(--r);
+  background:linear-gradient(180deg, rgba(12,15,20,.70), rgba(8,10,14,.55));
+  box-shadow:var(--shadow2);
+  position:sticky; top:82px; z-index:25;
+  backdrop-filter: blur(10px);
+}
+
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:8px;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid var(--border2);
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  font-weight:700;
+  font-size:13px;
+  line-height:1;
+  transition:transform .12s ease, border-color .12s ease, background .12s ease, box-shadow .12s ease;
+  user-select:none;
+}
+.btn:hover{
+  text-decoration:none;
+  transform:translateY(-1px);
+  border-color:rgba(255,255,255,.18);
+  background:rgba(255,255,255,.06);
+  box-shadow: 0 10px 26px rgba(0,0,0,.40);
+}
+.btn:active{transform:translateY(0)}
+.btn.primary{
+  border-color:rgba(255,27,45,.55);
+  background:linear-gradient(180deg, rgba(255,27,45,.22), rgba(255,27,45,.10));
+  box-shadow: 0 0 0 1px rgba(255,27,45,.18) inset, 0 12px 30px rgba(255,27,45,.12);
+}
+.btn.ghost{
+  background:rgba(0,0,0,.20);
+}
+.btn.small{padding:8px 10px; font-size:12px; border-radius:12px}
+
+.hero{margin-top:14px}
+.heroCard{
+  border:1px solid var(--border);
+  border-radius:var(--r);
+  background:linear-gradient(180deg, rgba(12,15,20,.75), rgba(8,10,14,.55));
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.heroInner{padding:18px 16px}
+.kicker{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+.pill{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:8px 10px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.03);
+  color:var(--muted);
+  font-size:12px;
+  font-weight:700;
+}
+.dot{
+  width:8px; height:8px; border-radius:999px;
+  background:var(--accent);
+  box-shadow:0 0 0 4px rgba(255,27,45,.12);
+}
+h1{
+  margin:14px 0 8px;
+  font-size:34px;
+  line-height:1.02;
+  letter-spacing:-.7px;
+}
+.sub{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.5;
+}
+.heroMeta{
+  display:flex; gap:10px; flex-wrap:wrap;
+  margin-top:14px;
+}
+.chip{
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.03);
+  padding:10px 12px;
+  border-radius:14px;
+  font-weight:700;
+  font-size:13px;
+  color:var(--text);
+}
+.chip span{color:var(--muted2); font-weight:800; margin-right:6px}
+.link{color:#fff; text-decoration:underline; text-underline-offset:3px}
+.sectionNav{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+.divider{
+  height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.10), transparent);
+}
+
+.card{
+  border:1px solid var(--border);
+  border-radius:var(--r);
+  background:linear-gradient(180deg, rgba(12,15,20,.70), rgba(8,10,14,.55));
+  box-shadow:var(--shadow2);
+  overflow:hidden;
+}
+.cardHeader{
+  padding:14px 16px;
+  display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.cardHeader h2{margin:0; font-size:16px; letter-spacing:-.2px}
+.hint{color:var(--muted2); font-size:12px; font-weight:700}
+.cardBody{padding:14px 16px}
+
+.list{list-style:none; padding:0; margin:0; display:grid; gap:12px}
+.row{display:flex; gap:12px; align-items:flex-start}
+.ico{
+  width:36px; height:36px;
+  display:grid; place-items:center;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.04);
+}
+.val{color:var(--muted); margin-top:3px; font-size:13px; line-height:1.45}
+.muted{color:var(--muted2); font-size:12px; margin-top:4px}
+.products{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap:12px;
+  margin-top:12px;
+}
+.product{
+  grid-column: span 12;
+  border:1px solid rgba(255,255,255,.08);
+  background:
+    radial-gradient(600px 220px at 10% -10%, rgba(255,27,45,.12), transparent 55%),
+    linear-gradient(180deg, rgba(10,12,16,.85), rgba(8,10,14,.62));
+  border-radius:var(--r2);
+  padding:14px 14px;
+  box-shadow: 0 10px 26px rgba(0,0,0,.35);
+}
+.pTop{display:flex; align-items:flex-start; justify-content:space-between; gap:10px}
+.pTitle{font-weight:900; letter-spacing:-.2px}
+.pMeta{margin-top:6px; color:var(--muted2); font-size:12px; line-height:1.45}
+.badge{
+  display:inline-flex;
+  padding:7px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(0,0,0,.25);
+  color:#fff;
+  font-weight:900;
+  font-size:12px;
+}
+.priceRow{
+  margin-top:12px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:12px;
+}
+.price{font-size:20px; font-weight:1000; letter-spacing:-.3px}
+.smallNote{color:var(--muted2); font-size:12px; margin-top:4px}
+.pActions{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+
+.form{display:grid; gap:10px}
+.input,.textarea{
+  width:100%;
+  padding:12px 12px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(0,0,0,.22);
+  color:var(--text);
+  outline:none;
+}
+.input:focus,.textarea:focus{
+  border-color:rgba(255,27,45,.45);
+  box-shadow:0 0 0 4px rgba(255,27,45,.10);
+}
+.textarea{min-height:120px; resize:vertical}
+
+.sep{
+  border:0;
+  height:1px;
+  margin:16px 0;
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,.10), transparent);
+}
+
+.footer{
+  margin-top:14px;
+  padding:14px 6px 0;
+  color:var(--muted2);
+  font-size:12px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.footerLinks{display:flex; gap:10px; flex-wrap:wrap}
+
+@media (min-width: 820px){
+  .wrap{padding:22px 18px 52px}
+  h1{font-size:46px}
+  .products{gap:14px}
+  .product{grid-column: span 6}
+}
